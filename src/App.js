@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './imagen/ll.png';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, NavLink,
   HashRouter } from "react-router-dom";
@@ -17,7 +17,7 @@ class App extends Component{
 
         <HashRouter>
          <div>
-          
+
           <ul className="header">
              <li><NavLink to="/">Home</NavLink></li>
             <li>< NavLink to="/stuff"  class="active">Stuff</NavLink></li>
@@ -34,6 +34,28 @@ class App extends Component{
         </div>
 
         </HashRouter>
+        <body>
+
+        <div class="main ui text container">
+        <h1 class="ui dividing centered header">Popular Products</h1>
+        <div id="content"></div>
+        </div>
+        <script src="./js/seed.js"></script>
+        <script src="./js/app.js"></script>
+
+        <script type="text/babel" data-plugins="transform-class-properties"
+        src="./js/app-complete.js">
+
+        </script>
+        </body>
+
+       <div className='item'>
+       <div className='image'>
+        <img src="/imagen/ll.png" />
+        <img src={logo} className="App-logo" alt="logo" />
+        </div>
+
+        </div>
 
       </div>
     );
